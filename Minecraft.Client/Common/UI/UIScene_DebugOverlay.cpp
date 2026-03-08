@@ -26,7 +26,7 @@ UIScene_DebugOverlay::UIScene_DebugOverlay(int iPad, void *initData, UILayer *pa
 	int fovSliderVal = app.GetGameSettings(m_iPad, eGameSetting_FOV);
 	int fovDeg = 70 + fovSliderVal * 40 / 100;
 	swprintf( (WCHAR *)TempString, 256, L"Set fov (%d)", fovDeg);
-	m_sliderFov.init(TempString,eControl_FOV,0,100,fovSliderVal);
+	m_sliderFov.init(TempString,eControl_FOV,1,100,fovSliderVal);
 
 	float currentTime = pMinecraft->level->getLevelData()->getGameTime() % 24000;
 	swprintf( (WCHAR *)TempString, 256, L"Set time (unsafe) (%d)", (int)currentTime);
